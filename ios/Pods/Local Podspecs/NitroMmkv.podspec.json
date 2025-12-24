@@ -1,0 +1,87 @@
+{
+  "name": "NitroMmkv",
+  "version": "4.1.0",
+  "summary": "⚡️ The fastest key/value storage for React Native.",
+  "homepage": "https://github.com/mrousavy/react-native-mmkv#readme",
+  "license": "MIT",
+  "authors": "Marc Rousavy <me@mrousavy.com> (https://github.com/mrousavy)",
+  "platforms": {
+    "ios": "15.1",
+    "visionos": "1.0",
+    "tvos": "12.0",
+    "osx": "10.14"
+  },
+  "source": {
+    "git": "https://github.com/mrousavy/react-native-mmkv.git",
+    "tag": "4.1.0"
+  },
+  "source_files": [
+    "ios/**/*.{swift}",
+    "ios/**/*.{m,mm}",
+    "cpp/**/*.{hpp,cpp}",
+    "nitrogen/generated/shared/**/*.{h,hpp,c,cpp,swift}",
+    "nitrogen/generated/ios/**/*.{h,hpp,c,cpp,mm,swift}"
+  ],
+  "compiler_flags": "-x objective-c++  -DRCT_NEW_ARCH_ENABLED=1",
+  "dependencies": {
+    "MMKVCore": [
+      "2.2.4"
+    ],
+    "NitroModules": [],
+    "React-jsi": [],
+    "React-callinvoker": [],
+    "React-Core": [],
+    "React-RCTFabric": [],
+    "ReactCodegen": [],
+    "RCTRequired": [],
+    "RCTTypeSafety": [],
+    "ReactCommon/turbomodule/bridging": [],
+    "ReactCommon/turbomodule/core": [],
+    "React-NativeModulesApple": [],
+    "Yoga": [],
+    "React-Fabric": [],
+    "React-graphics": [],
+    "React-utils": [],
+    "React-featureflags": [],
+    "React-debug": [],
+    "React-ImageManager": [],
+    "React-rendererdebug": [],
+    "React-renderercss": [],
+    "hermes-engine": [],
+    "glog": [],
+    "boost": [],
+    "DoubleConversion": [],
+    "fast_float": [],
+    "fmt": [],
+    "RCT-Folly": [],
+    "SocketRocket": [],
+    "RCT-Folly/Fabric": []
+  },
+  "pod_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": [
+      "[\"${PODS_ROOT}/RCT-Folly\"]",
+      "\"$(PODS_ROOT)/Headers/Private/Yoga\"",
+      "$(PODS_ROOT)/glog",
+      "$(PODS_ROOT)/boost",
+      "$(PODS_ROOT)/DoubleConversion",
+      "$(PODS_ROOT)/fast_float/include",
+      "$(PODS_ROOT)/fmt/include",
+      "$(PODS_ROOT)/SocketRocket",
+      "$(PODS_ROOT)/RCT-Folly"
+    ],
+    "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) FOLLY_NO_CONFIG FOLLY_CFG_NO_COROUTINES",
+    "OTHER_CPLUSPLUSFLAGS": "$(inherited) -DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DRCT_NEW_ARCH_ENABLED=1 ",
+    "CLANG_CXX_LANGUAGE_STANDARD": "c++20",
+    "SWIFT_OBJC_INTEROP_MODE": "objcxx",
+    "DEFINES_MODULE": "YES",
+    "OTHER_SWIFT_FLAGS": "$(inherited) -DRCT_NEW_ARCH_ENABLED"
+  },
+  "public_header_files": [
+    "nitrogen/generated/shared/**/*.{h,hpp}",
+    "nitrogen/generated/ios/NitroMmkv-Swift-Cxx-Bridge.hpp"
+  ],
+  "private_header_files": [
+    "nitrogen/generated/ios/c++/**/*.{h,hpp}",
+    "nitrogen/generated/shared/**/views/**/*"
+  ]
+}

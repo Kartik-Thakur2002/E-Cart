@@ -1,0 +1,21 @@
+appId: com.awesomeproject
+---
+- launchApp
+
+- assertVisible:
+    id: product_4_add_button
+- tapOn:
+    id: product_4_add_button
+
+- assertVisible:
+    id: cart_button
+- tapOn:
+    id: cart_button
+
+- assertVisible:
+    id: cart_item_delete_4
+- tapOn:
+    id: cart_item_delete_4
+
+- tapOn:
+    id: back_to_home_button

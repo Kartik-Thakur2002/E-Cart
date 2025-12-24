@@ -1,0 +1,6 @@
+module NitroMmkv {
+  umbrella header "NitroMmkv-umbrella.h"
+
+  export *
+  module * { export * }
+}

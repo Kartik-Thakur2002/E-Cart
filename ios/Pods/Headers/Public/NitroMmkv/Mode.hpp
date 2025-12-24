@@ -1,0 +1,1 @@
+../../../../../node_modules/react-native-mmkv/nitrogen/generated/shared/c++/Mode.hpp
